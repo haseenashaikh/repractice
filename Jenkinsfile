@@ -1,36 +1,39 @@
 pipeline{
     agent any
     stages{
-        stage ('git_clone'){
+        stage('git_clone'){
             steps{
                 sh'''
                 pwd
                 rm -rf *
-                git clone "https://github.com/haseenashaikh/repractice.git"
+                git clone ""
                 '''
             }
         }
-      stage ('maven'){
-          steps{
+        stage('maven'){
+            steps{
                 sh'''
                 pwd
+                rm -rf *
                 mvn clean
                 '''
             }
         }
-      stage ('maven-1'){
-          steps{
+        stage('maven-1'){
+            steps{
                 sh'''
-                mvn compile
                 pwd
+                rm -rf *
+                mvn test
                 '''
             }
         }
-      stage ('maven-2'){
-          steps{
+        stage('maven-2'){
+            steps{
                 sh'''
                 pwd
-                mvn install
+                rm -rf *
+                mvncompile
                 '''
             }
         }
