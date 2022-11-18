@@ -6,34 +6,31 @@ pipeline{
                 sh'''
                 pwd
                 rm -rf *
-                git clone ""
+                git clone "https://github.com/haseenashaikh/repractice.git"
                 '''
             }
         }
-      stage ('git_clone'){
+      stage ('maven'){
             steps{
                 sh'''
                 pwd
-                rm -rf *
-                git clone "https://github.com/haseenashaikh/shabir.git"
+                mvn clean
                 '''
             }
         }
-      stage ('git_clone'){
+      stage ('maven-1'){
             steps{
                 sh'''
+                mvn compile
                 pwd
-                rm -rf *
-                git clone "https://github.com/haseenashaikh/shabir.git"
                 '''
             }
         }
-      stage ('git_clone'){
+      stage ('maven-2'){
             steps{
                 sh'''
                 pwd
-                rm -rf *
-                git clone "https://github.com/haseenashaikh/shabir.git"
+                mvn install
                 '''
             }
         }
