@@ -30,7 +30,7 @@ pipeline{
             steps{
                 sh'''
                 cd repractice
-                mvncompile
+                mvn compile
                 '''
             }
         }
