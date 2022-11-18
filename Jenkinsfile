@@ -6,7 +6,7 @@ pipeline{
                 sh'''
                 pwd
                 rm -rf *
-                git clone ""
+                git clone "https://github.com/haseenashaikh/repractice.git"
                 '''
             }
         }
