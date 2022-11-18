@@ -13,7 +13,7 @@ pipeline{
         stage('maven'){
             steps{
                 sh'''
-                pwd
+                cd repractice
                 mvn clean
                 '''
             }
@@ -21,7 +21,7 @@ pipeline{
         stage('maven-1'){
             steps{
                 sh'''
-                pwd
+                cd repractice
                 mvn test
                 '''
             }
@@ -29,7 +29,7 @@ pipeline{
         stage('maven-2'){
             steps{
                 sh'''
-                pwd
+                cd repractice
                 mvncompile
                 '''
             }
