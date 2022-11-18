@@ -11,7 +11,7 @@ pipeline{
             }
         }
       stage ('maven'){
-            steps{
+          steps{
                 sh'''
                 pwd
                 mvn clean
@@ -19,7 +19,7 @@ pipeline{
             }
         }
       stage ('maven-1'){
-            steps{
+          steps{
                 sh'''
                 mvn compile
                 pwd
@@ -27,7 +27,7 @@ pipeline{
             }
         }
       stage ('maven-2'){
-            steps{
+          steps{
                 sh'''
                 pwd
                 mvn install
