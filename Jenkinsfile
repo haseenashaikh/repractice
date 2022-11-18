@@ -14,7 +14,6 @@ pipeline{
             steps{
                 sh'''
                 pwd
-                rm -rf *
                 mvn clean
                 '''
             }
@@ -23,7 +22,6 @@ pipeline{
             steps{
                 sh'''
                 pwd
-                rm -rf *
                 mvn test
                 '''
             }
@@ -32,7 +30,6 @@ pipeline{
             steps{
                 sh'''
                 pwd
-                rm -rf *
                 mvncompile
                 '''
             }
